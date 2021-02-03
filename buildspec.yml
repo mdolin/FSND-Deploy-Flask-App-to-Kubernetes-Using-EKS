@@ -22,7 +22,7 @@ phases:
       - echo `kubectl version`
       - export PATH=$PWD/:$PATH
       - python -m pip install --upgrade --force pip
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+      - sudo apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
       - apt-get update
       - apt-get -y install jq
       - pip install --upgrade awscli
